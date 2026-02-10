@@ -1,0 +1,274 @@
+/* Estilos Login */
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Azul muy oscuro de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* Contenedor Principal */
+.login-container {
+    background-color: #1e293b; /* Azul grisáceo del card */
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Icono de Usuario */
+.user-icon {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.user-icon i {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+/* Tipografía */
+h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Formulario */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #334155;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+/* Botón con Degradado */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #2563eb, #0891b2);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+}
+
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+/* Textos inferiores */
+.footer-text {
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+/* Caja de Demo */
+.demo-box {
+    margin-top: 30px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 13px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.demo-box p {
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
+
+.demo-box code {
+    color: #cbd5e1;
+    font-family: monospace;
+}
+
+/* Estilos Registro */
+/* Reset y Fuente base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Inter, system-ui, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Fondo principal muy oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Tarjeta Principal */
+.register-card {
+    background-color: #111827; /* Fondo de la tarjeta (ligeramente distinto al body) */
+    border: 1px solid #1f2937; /* Borde sutil */
+    padding: 40px;
+    border-radius: 24px; /* Bordes muy redondeados como en la imagen */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor del Icono */
+.icon-container {
+    width: 64px;
+    height: 64px;
+    /* Degradado de Violeta a Rosa Fuerte */
+    background: linear-gradient(135deg, #c084fc, #e879f9);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    color: white;
+}
+
+.icon-container svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2.5;
+}
+
+/* Textos */
+h1 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #9ca3af; /* Gris medio */
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+/* Inputs y Etiquetas */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #374151; /* Gris oscuro azulado para el input */
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input::placeholder {
+    color: #6b7280;
+}
+
+input:focus {
+    border-color: #e879f9; /* Borde rosa al escribir */
+    background-color: #1f2937;
+}
+
+/* Botón Principal */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    /* Mismo degradado que el icono */
+    background: linear-gradient(90deg, #a855f7, #ec4899); 
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+/* Pie de página */
+.footer-text {
+    margin-top: 24px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: #60a5fa; /* Azul claro para el link */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+

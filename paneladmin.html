@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechStore - Panel de Administración</title>
+   
+    <link rel="stylesheet" href="CSS/menubar.css">
     <link rel="stylesheet" href="CSS/paneladmin.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -148,19 +150,52 @@
                                 <td>350 €</td>
                                 <td>15 unidades</td>
                             </tr>
-                            <tr>
-                                <td><div class="prod-img"><i class='bx bx-mobile-alt'></i></div></td>
-                                <td><strong>iPhone 15 Pro</strong></td>
-                                <td>Smartphones</td>
-                                <td>1,100 €</td>
-                                <td>8 unidades</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">💻</span>
+                    <strong>TechStore</strong>
+                </div>
+                <p>Tu tienda de confianza para tecnología de última generación.</p>
+                <div class="social-icons">
+                    <i class='bx bxl-facebook-circle'></i> 
+                    <i class='bx bxl-twitter'></i> 
+                    <i class='bx bxl-instagram'></i>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Tienda</h4>
+                <a href="#">Ordenadores</a>
+                <a href="#">Componentes</a>
+                <a href="#">Periféricos</a>
+            </div>
+            <div class="footer-links">
+                <h4>Atención al Cliente</h4>
+                <a href="#">Centro de ayuda</a>
+                <a href="#">Garantía</a>
+            </div>
+            <div class="footer-links">
+                <h4>Contacto</h4>
+                <p>📧 info@techstore.com</p>
+                <p>📞 +34 900 123 456</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 TechStore. Todos los derechos reservados.</p>
+            <div class="legal">
+                <span>Términos y condiciones</span>
+                <span>Privacidad</span>
+            </div>
+        </div>
+    </footer>
 
     <script>
         const tabs = document.querySelectorAll('.tab');
@@ -169,12 +204,8 @@
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const target = tab.getAttribute('data-target');
-
-                // Eliminar estados activos
                 tabs.forEach(t => t.classList.remove('active'));
                 contents.forEach(c => c.classList.remove('active'));
-
-                // Activar el seleccionado
                 tab.classList.add('active');
                 document.getElementById(target).classList.add('active');
             });
