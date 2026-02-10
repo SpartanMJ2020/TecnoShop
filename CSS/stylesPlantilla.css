@@ -1,0 +1,128 @@
+:root {
+    --bg-dark: #0a0e17;
+    --card-bg: #111827;
+    --card-border: #1f2937;
+    --primary-blue: #2563eb;
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --accent-purple: #7c3aed;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+/* Variables compartidas para el Menú */
+:root {
+    --bg-dark: #0a0e17;
+    --accent-blue: #2563eb;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Logo */
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon {
+    background: var(--accent-blue);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    display: flex;
+    color: white;
+}
+.logo h1 { font-size: 1.1rem; font-weight: 700; color: white; margin: 0; }
+.logo p { font-size: 0.7rem; color: var(--text-muted); margin: 0; }
+
+/* Buscador */
+.search-bar {
+    background: #1e293b;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+.search-bar i { color: var(--text-muted); }
+
+/* Enlaces y Botón */
+.nav-links { display: flex; align-items: center; gap: 25px; }
+.nav-links a { color: var(--text-main); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent-blue); }
+.cart-icon { font-size: 1.4rem; cursor: pointer; color: white; }
+
+.admin-btn {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+.admin-btn:hover { background: #2d3748; }
+/* Footer */
+.footer {
+    background: var(--card-bg);
+    padding: 50px 5% 20px;
+    border-top: 1px solid var(--card-border);
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand p { font-size: 0.85rem; color: var(--text-muted); margin: 15px 0; max-width: 300px; }
+.footer-links h4 { margin-bottom: 20px; font-size: 1rem; }
+.footer-links a, .footer-links p { display: block; color: var(--text-muted); text-decoration: none; font-size: 0.85rem; margin-bottom: 10px; }
+
+.footer-bottom {
+    border-top: 1px solid #1f2937;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.legal span { margin-left: 20px; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon {
+    background: var(--accent-blue);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    display: flex;
+}
+.logo h1 { font-size: 1.1rem; font-weight: 700; }
+.logo p { font-size: 0.7rem; color: var(--text-muted); }
