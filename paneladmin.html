@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Panel de Administración</title>
+    <link rel="stylesheet" href="CSS/paneladmin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon"><i class='bx bx-desktop'></i></div>
+            <div>
+                <h1>TechStore</h1>
+                <p>Tu destino tecnológico</p>
+            </div>
+        </div>
+        <div class="search-bar">
+            <i class='bx bx-search'></i>
+            <input type="text" placeholder="Buscar productos...">
+        </div>
+        <nav class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Categorías</a>
+            <i class='bx bx-shopping-bag cart-icon'></i>
+            <button class="admin-btn"><i class='bx bx-user'></i> Administrador</button>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <h2 class="section-title"><i class='bx bx-cog'></i> Panel de Administración</h2>
+
+        <section class="stats-container">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span>Total Pedidos</span>
+                    <h3 id="count-pedidos">0</h3>
+                </div>
+                <div class="stat-icon blue"><i class='bx bx-clipboard'></i></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span>Usuarios</span>
+                    <h3 id="count-usuarios">2</h3>
+                </div>
+                <div class="stat-icon green"><i class='bx bx-group'></i></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span>Ventas Totales</span>
+                    <h3>0 €</h3>
+                </div>
+                <div class="stat-icon purple"><i class='bx bx-dollar'></i></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span>Productos</span>
+                    <h3 id="count-productos">12</h3>
+                </div>
+                <div class="stat-icon orange"><i class='bx bx-package'></i></div>
+            </div>
+        </section>
+
+        <section class="management-section">
+            <div class="tabs">
+                <button class="tab active" data-target="section-pedidos">Pedidos</button>
+                <button class="tab" data-target="section-usuarios">Usuarios</button>
+                <button class="tab" data-target="section-productos">Productos</button>
+            </div>
+
+            <div id="section-pedidos" class="tab-content active">
+                <div class="content-table">
+                    <header class="table-header">
+                        <h3>Gestión de Pedidos</h3>
+                    </header>
+                    <div class="empty-state">
+                        <i class='bx bx-info-circle'></i>
+                        <p>No hay pedidos registrados actualmente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section-usuarios" class="tab-content">
+                <div class="content-table">
+                    <header class="table-header">
+                        <h3>Gestión de Usuarios</h3>
+                    </header>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Usuario</th>
+                                <th>Correo Electrónico</th>
+                                <th>Rol</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td><strong>Admin_Tech</strong></td>
+                                <td>admin@techstore.com</td>
+                                <td><span class="badge badge-blue">Administrador</span></td>
+                                <td><span class="status-dot online"></span> Activo</td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td><strong>JuanDeveloper</strong></td>
+                                <td>juan.dev@gmail.com</td>
+                                <td><span class="badge">Cliente</span></td>
+                                <td><span class="status-dot online"></span> Activo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="section-productos" class="tab-content">
+                <div class="content-table">
+                    <header class="table-header">
+                        <h3>Gestión de Productos</h3>
+                    </header>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Vista</th>
+                                <th>Producto</th>
+                                <th>Categoría</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="prod-img"><i class='bx bx-laptop'></i></div></td>
+                                <td><strong>MacBook Pro M2</strong></td>
+                                <td>Laptops</td>
+                                <td>2,499 €</td>
+                                <td>5 unidades</td>
+                            </tr>
+                            <tr>
+                                <td><div class="prod-img"><i class='bx bx-headphone'></i></div></td>
+                                <td><strong>Sony WH-1000XM5</strong></td>
+                                <td>Audio</td>
+                                <td>350 €</td>
+                                <td>15 unidades</td>
+                            </tr>
+                            <tr>
+                                <td><div class="prod-img"><i class='bx bx-mobile-alt'></i></div></td>
+                                <td><strong>iPhone 15 Pro</strong></td>
+                                <td>Smartphones</td>
+                                <td>1,100 €</td>
+                                <td>8 unidades</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-target');
+
+                // Eliminar estados activos
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Activar el seleccionado
+                tab.classList.add('active');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
