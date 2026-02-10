@@ -1,0 +1,322 @@
+/* Variables de color */
+:root {
+    --bg-color: #0b1120;
+    --card-bg: #111a2e;
+    --border-color: #1e293b;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --accent-blue: #38bdf8;
+    --status-yellow: #eab308;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    background-image: 
+        linear-gradient(rgba(30, 41, 59, 0.2) 1px, transparent 1px),
+        linear-gradient(90px, rgba(30, 41, 59, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px; /* Cuadrícula del fondo */
+    color: var(--text-main);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background-color: var(--accent-blue);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.logo-text h1 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.logo-text span {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.search-container {
+    position: relative;
+    flex-grow: 0.4;
+}
+
+.search-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.search-container input {
+    width: 100%;
+    background-color: #1e293b;
+    border: 1px solid var(--border-color);
+    padding: 8px 12px 8px 35px;
+    border-radius: 6px;
+    color: white;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-profile {
+    border: 1px solid var(--border-color);
+    padding: 6px 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Contenido Principal */
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Tarjeta de Pedido */
+.order-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.order-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.order-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.order-tracking {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.order-status {
+    text-align: right;
+}
+
+.badge-pending {
+    background-color: rgba(234, 179, 8, 0.15);
+    color: var(--status-yellow);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.track-link {
+    display: block;
+    margin-top: 10px;
+    color: var(--accent-blue);
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+/* Items del pedido */
+.order-items {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-icon {
+    font-size: 1.2rem;
+}
+
+.item-name {
+    font-size: 0.95rem;
+}
+
+.item-qty {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none; /* Se cambia a 'flex' vía JS */
+    position: fixed;
+    z-index: 9999; /* Asegúrate de que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+.modal-content {
+    background-color: #1a2333;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.close-modal {
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+/* Línea de tiempo (Timeline) */
+/* Corregimos el posicionamiento del contenedor para que los iconos queden alineados */
+.timeline {
+    position: relative;
+    margin: 25px 0;
+    padding-left: 50px; /* Un poco más de espacio a la izquierda */
+    border-left: none; /* Quitamos bordes extra */
+}
+
+/* La línea vertical que conecta los puntos */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 21px; /* Centrado exacto con el icono */
+    top: 10px;
+    width: 2px;
+    height: calc(100% - 40px); /* Evita que la línea sobresalga al final */
+    background: var(--border-color);
+}
+
+/* Pasos individuales */
+.step {
+    position: relative;
+    margin-bottom: 40px; /* Más espacio entre estados */
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.step.completed, .step.active { 
+    opacity: 1; 
+}
+
+/* Estilo de los iconos circulares */
+.step-icon {
+    position: absolute;
+    left: -40px; /* Ajuste para alinear con la línea ::before */
+    width: 32px; 
+    height: 32px;
+    background: #1e293b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    border: 2px solid var(--border-color);
+    z-index: 2;
+}
+
+/* Color azul cuando el paso está completado (según tu imagen) */
+.step.completed .step-icon {
+    background: #3b82f6; 
+    border-color: #3b82f6;
+    color: white;
+}
+
+/* Animación opcional para el paso "activo" (En preparación) */
+.step.active .step-icon {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+.step-info strong { display: block; font-size: 0.95rem; }
+.step-info span { font-size: 0.75rem; color: var(--text-muted); }
+
+/* Dirección */
+.delivery-address {
+    background: rgba(30, 41, 59, 0.5); /* Un tono ligeramente distinto al fondo */
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.delivery-address p { 
+    color: var(--text-muted); 
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.delivery-address strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.delivery-address span { 
+    display: block; 
+    color: var(--text-muted); 
+    line-height: 1.5;
+}
