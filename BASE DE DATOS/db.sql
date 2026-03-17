@@ -8,7 +8,7 @@ USE tecnoshop_db;
 CREATE TABLE roles (
     id_rol_PK INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     nombre VARCHAR(50) NOT NULL UNIQUE, 
-    descripcion VARCHAR(255)
+    descripcion VARCHAR(255).
 );
 
 -- Tabla de Usuarios
