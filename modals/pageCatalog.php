@@ -11,7 +11,7 @@
           <div><label class="text-sm text-slate-400 mb-2 block">Categoría</label> <select id="filter-category" onchange="filterProducts()" class="w-full px-3 py-2 bg-slate-700 rounded-lg border border-slate-600 text-sm"> <option value="all">Todas</option> <option value="ordenadores">Ordenadores</option> <option value="componentes">Componentes</option> <option value="perifericos">Periféricos</option> </select>
           </div>
           <div><label class="text-sm text-slate-400 mb-2 block">Precio máximo</label> <input type="range" id="filter-price" min="0" max="3000" value="3000" onchange="filterProducts()" class="w-full accent-blue-500">
-           <div class="flex justify-between text-xs text-slate-500 mt-1"><span>0€</span> <span id="price-display">3000€</span>
+           <div class="flex justify-between text-xs text-slate-500 mt-1"><span>0$</span> <span id="price-display">3000$</span>
            </div>
           </div>
           <div><label class="text-sm text-slate-400 mb-2 block">Ordenar por</label> <select id="filter-sort" onchange="filterProducts()" class="w-full px-3 py-2 bg-slate-700 rounded-lg border border-slate-600 text-sm"> <option value="featured">Destacados</option> <option value="price-low">Precio: menor a mayor</option> <option value="price-high">Precio: mayor a menor</option> <option value="name">Nombre A-Z</option> </select>

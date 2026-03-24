@@ -160,7 +160,7 @@
       document.getElementById('products-count').textContent = defaultProducts.length + ' productos';
       document.getElementById('filter-category').value = 'all';
       document.getElementById('filter-price').value = '3000';
-      document.getElementById('price-display').textContent = '3000€';
+      document.getElementById('price-display').textContent = '3000$';
       document.getElementById('filter-sort').value = 'featured';
     }
     
@@ -174,7 +174,7 @@
             <h3 class="font-bold mb-2">${product.name}</h3>
             <p class="text-slate-400 text-sm mb-3">${product.specs}</p>
             <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-blue-400">${product.price} €</span>
+              <span class="text-xl font-bold text-blue-400">${product.price} $</span>
               <button onclick="addToCart('${product.id}')" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-medium transition-colors">
                 Añadir
               </button>
@@ -190,7 +190,7 @@
       const maxPrice = parseInt(document.getElementById('filter-price').value);
       const sort = document.getElementById('filter-sort').value;
       
-      document.getElementById('price-display').textContent = maxPrice + '€';
+      document.getElementById('price-display').textContent = maxPrice + '$';
       
       let filtered = defaultProducts.filter(p => {
         const catMatch = category === 'all' || p.category === category;
@@ -223,7 +223,7 @@
     function clearFilters() {
       document.getElementById('filter-category').value = 'all';
       document.getElementById('filter-price').value = '3000';
-      document.getElementById('price-display').textContent = '3000€';
+      document.getElementById('price-display').textContent = '3000$';
       document.getElementById('filter-sort').value = 'featured';
       renderCatalog();
     }
@@ -284,7 +284,7 @@
             </div>
             <div class="flex-1">
               <h4 class="font-semibold">${product.name}</h4>
-              <p class="text-sm text-slate-400">${product.price} € / unidad</p>
+              <p class="text-sm text-slate-400">${product.price} $ / unidad</p>
             </div>
             <div class="flex items-center gap-2">
               <button onclick="updateCartQuantity('${item.productId}', -1)" class="w-8 h-8 rounded-lg bg-slate-700 hover:bg-slate-600 text-center">−</button>
@@ -292,7 +292,7 @@
               <button onclick="updateCartQuantity('${item.productId}', 1)" class="w-8 h-8 rounded-lg bg-slate-700 hover:bg-slate-600 text-center">+</button>
             </div>
             <div class="w-24 text-right">
-              <p class="font-bold text-blue-400">${itemTotal} €</p>
+              <p class="font-bold text-blue-400">${itemTotal} $</p>
             </div>
             <button onclick="removeFromCart('${item.productId}')" class="p-2 text-slate-400 hover:text-red-400">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -303,7 +303,7 @@
         `;
       }).join('');
       
-      document.getElementById('cart-total').textContent = `${subtotal.toFixed(2)} €`;
+      document.getElementById('cart-total').textContent = `${subtotal.toFixed(2)} $`;
       
       const loginNotice = document.getElementById('login-notice');
       if (!currentUser) {
@@ -532,7 +532,7 @@
             <div class="flex items-start justify-between mb-4">
               <div>
                 <p class="text-sm text-slate-400">Pedido del ${date}</p>
-                <p class="text-2xl font-bold text-blue-400 mt-2">${order.total.toFixed(2)} €</p>
+                <p class="text-2xl font-bold text-blue-400 mt-2">${order.total.toFixed(2)} $</p>
                 <p class="text-xs text-slate-500 mono mt-2">${order.trackingNumber}</p>
               </div>
               <div class="flex flex-col items-end gap-3">
